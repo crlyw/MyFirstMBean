@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="nodeConnectionStatus1" class="com.tangosol.coherence.component.manageable.modelAdapter.NodeConnectionStatus">
+		<property name="connectionStatus" value="true" />
+	</bean>
+	
+	<bean id="nodeConnectionStatus2" class="com.tangosol.coherence.component.manageable.modelAdapter.NodeConnectionStatus">
+		<property name="connectionStatus" value="false" />
+	</bean>
+	
+	<bean id="nodeConnectionStatus3" class="com.tangosol.coherence.component.manageable.modelAdapter.NodeConnectionStatus">
+		<property name="connectionStatus" value="true" />
+	</bean>
+	
+	<bean id="nodeConnectionStatus4" class="com.tangosol.coherence.component.manageable.modelAdapter.NodeConnectionStatus">
+		<property name="connectionStatus" value="true" />
+	</bean>
+	
+	<bean id="nodeConnectionStatus5" class="com.tangosol.coherence.component.manageable.modelAdapter.NodeConnectionStatus">
+		<property name="connectionStatus" value="true" />
+	</bean>
+	
+	<bean id="nodeConnectionStatus6" class="com.tangosol.coherence.component.manageable.modelAdapter.NodeConnectionStatus">
+		<property name="connectionStatus" value="false" />
+	</bean>
+	
+	<bean id="nodeConnectionStatus7" class="com.tangosol.coherence.component.manageable.modelAdapter.NodeConnectionStatus">
+		<property name="connectionStatus" value="true" />
+	</bean>
+
+	<bean id="nodeConnectionStatus8" class="com.tangosol.coherence.component.manageable.modelAdapter.NodeConnectionStatus">
+		<property name="connectionStatus" value="false" />
+	</bean>
+	
+	<bean id="cluster" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterMBean">
+	</bean>
+	
+	<bean id="ClusterNodeMBean1" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterNodeMBean">
+		<property name="MemberName" value="MER-Partitioned-node1-Mock"/>
+		<property name="MachineName" value="wupra08a0135-Mock"/>
+		<property name="UnicastPort" value="12088"/>
+		<property name="MemoryMaxMB" value="3959"/>
+		<property name="loggingLevel" value="6"/>
+	</bean>
+	
+	<bean id="ClusterNodeMBean2" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterNodeMBean">
+		<property name="MemberName" value="MER-Extend-node8-Mock"/>
+		<property name="MachineName" value="wupra11a0135-Mock"/>
+		<property name="UnicastPort" value="12090"/>
+		<property name="MemoryMaxMB" value="1484"/>
+		<property name="loggingLevel" value="6"/>
+	</bean>
+	
+	<bean id="ClusterNodeMBean3" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterNodeMBean">
+		<property name="MemberName" value="MER-Extend-node6-Mock"/>
+		<property name="MachineName" value="wupra09a0135-Mock"/>
+		<property name="UnicastPort" value="12090"/>
+		<property name="MemoryMaxMB" value="1484"/>
+		<property name="loggingLevel" value="6"/>
+	</bean>
+	
+	<bean id="ClusterNodeMBean4" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterNodeMBean">
+		<property name="MemberName" value="MER-Partitioned-node3-Mock"/>
+		<property name="MachineName" value="wupra10a0135-Mock"/>
+		<property name="UnicastPort" value="12088"/>
+		<property name="MemoryMaxMB" value="3959"/>
+		<property name="loggingLevel" value="6"/>
+	</bean>
+	
+	<bean id="ClusterNodeMBean5" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterNodeMBean">
+		<property name="MemberName" value="MER-Extend-node5-Mock"/>
+		<property name="MachineName" value="wupra08a0135-Mock"/>
+		<property name="UnicastPort" value="12090"/>
+		<property name="MemoryMaxMB" value="1484"/>
+		<property name="loggingLevel" value="6"/>
+	</bean>
+	
+	<bean id="ClusterNodeMBean6" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterNodeMBean">
+		<property name="MemberName" value="MER-Partitioned-node4-Mock"/>
+		<property name="MachineName" value="wupra11a0135-Mock"/>
+		<property name="UnicastPort" value="12088"/>
+		<property name="MemoryMaxMB" value="3959"/>
+		<property name="loggingLevel" value="6"/>
+	</bean>
+	
+	<bean id="ClusterNodeMBean7" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterNodeMBean">
+		<property name="MemberName" value="MER-Extend-node7-Mock"/>
+		<property name="MachineName" value="wupra10a0135-Mock"/>
+		<property name="UnicastPort" value="12090"/>
+		<property name="MemoryMaxMB" value="1484"/>
+		<property name="loggingLevel" value="6"/>
+	</bean>
+	
+	<bean id="ClusterNodeMBean8" class="com.tangosol.coherence.component.manageable.modelAdapter.ClusterNodeMBean">
+		<property name="MemberName" value="MER-Partitioned-node2-Mock"/>
+		<property name="MachineName" value="wupra09a0135-Mock"/>
+		<property name="UnicastPort" value="12088"/>
+		<property name="MemoryMaxMB" value="3959"/>
+		<property name="loggingLevel" value="6"/>
+	</bean>
+	
+	<bean id="jmxExporter" class="org.springframework.jmx.export.MBeanExporter"> 
+		<property name="beans"> 
+			<map> 
+				<entry key="Coherence:type=NodeConnectionStatus,nodeId=1" value-ref="nodeConnectionStatus1"/> 
+				<entry key="Coherence:type=NodeConnectionStatus,nodeId=2" value-ref="nodeConnectionStatus2"/> 
+				<entry key="Coherence:type=NodeConnectionStatus,nodeId=3" value-ref="nodeConnectionStatus3"/> 
+				<entry key="Coherence:type=NodeConnectionStatus,nodeId=4" value-ref="nodeConnectionStatus4"/> 
+				<entry key="Coherence:type=NodeConnectionStatus,nodeId=5" value-ref="nodeConnectionStatus5"/> 
+				<entry key="Coherence:type=NodeConnectionStatus,nodeId=6" value-ref="nodeConnectionStatus6"/> 
+				<entry key="Coherence:type=NodeConnectionStatus,nodeId=7" value-ref="nodeConnectionStatus7"/> 
+				<entry key="Coherence:type=NodeConnectionStatus,nodeId=8" value-ref="nodeConnectionStatus8"/>
+				
+				<entry key="Coherence:type=Cluster" value-ref="cluster"/>
+				
+				<entry key="Coherence:type=Node,nodeId=1" value-ref="ClusterNodeMBean1"/>
+				<entry key="Coherence:type=Node,nodeId=2" value-ref="ClusterNodeMBean2"/>
+				<entry key="Coherence:type=Node,nodeId=3" value-ref="ClusterNodeMBean3"/>
+				<entry key="Coherence:type=Node,nodeId=4" value-ref="ClusterNodeMBean4"/>
+				<entry key="Coherence:type=Node,nodeId=5" value-ref="ClusterNodeMBean5"/>
+				<entry key="Coherence:type=Node,nodeId=6" value-ref="ClusterNodeMBean6"/>
+				<entry key="Coherence:type=Node,nodeId=7" value-ref="ClusterNodeMBean7"/>
+				<entry key="Coherence:type=Node,nodeId=8" value-ref="ClusterNodeMBean8"/>
+			</map> 
+		</property> 
+	</bean> 
+
+	<!-- <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter"
+		lazy-init="false">
+		<property name="autodetect" value="true"></property>
+		<property name="namingStrategy" ref="namingStrategy"></property>
+		<property name="assembler" ref="assembler"></property>
+	</bean>
+	<bean id="attributeSource"
+		class="org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource" />
+	<bean id="assembler"
+		class="org.springframework.jmx.export.assembler.MetadataMBeanInfoAssembler">
+		<property name="attributeSource" ref="attributeSource" />
+	</bean>
+	<bean id="namingStrategy"
+		class="org.springframework.jmx.export.naming.MetadataNamingStrategy">
+		<property name="attributeSource" ref="attributeSource" />
+	</bean> -->
+
+</beans>
